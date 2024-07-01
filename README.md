@@ -13,7 +13,7 @@ Login Object Session (LOS o login-object-session) es un pequeño proyecto desarr
 
 ## Vista Previa
 
-_Inserte Pantallas_
+![LOS-login](https://github.com/G-Mann00/login-object-session/assets/103607877/9f73a50f-0f73-49ad-8f22-f789f28d7163)
 
 ## Usos del Proyecto
 
