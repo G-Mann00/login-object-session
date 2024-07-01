@@ -23,6 +23,14 @@ Este proyecto fue creado mediante la herramienta de construcción (build tool) V
 - Material Tailwind
 - React Router
 - React Icons
+- Axios
+- Express
+- Mongoose
+- CORS
+- Body-parser
+- Bcrypt
+- Jsonwebtoken
+- Nodemon
 
 ## Prototipos con Figma
 
@@ -56,7 +64,7 @@ Para el funcionamiento correcto de la aplicación, se deben ejecutar tanto el ba
 
 ### Ejecución del Backend
 
-El backend se ejecutara en _puerto pendiente_
+El backend se ejecutara en http://localhost:3007
 
 ```bash
 cd ./backend

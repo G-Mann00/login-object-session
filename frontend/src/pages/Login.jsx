@@ -8,8 +8,54 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  // Variables de estado
+  // Lista de usuarios
+  const [users, setUsers] = useState([]);
+
+  // Carga los datos del formulario
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Navegacion
+  const navigate = useNavigate();
+
+  // Funcion para cargar la lista de usuarios
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  const fetchUsers = () => {
+    axios.get("http://localhost:3007/signup").then((res) => {
+      console.log(res.data);
+    });
+  };
+
+  // Funcion para iniciar sesion
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:3007/signin", {
+        username,
+        password,
+      });
+      const token = response.data.token;
+      alert("Inicio de sesión exitoso");
+      setUsername("");
+      setPassword("");
+      fetchUsers();
+      navigate("/menu");
+      window.location.reload();
+      localStorage.setItem("token", token);
+    } catch (error) {
+      console.log("Error al iniciar sesion", error);
+    }
+  };
+
   return (
     <>
       {/* Componente principal (Background) */}
@@ -18,7 +64,7 @@ function Login() {
         <div id="user-pattern"></div>
 
         {/* Formulario de inicio de sesión */}
-        <form className="flex items-center">
+        <form className="flex items-center" onSubmit={handleLogin}>
           <Card className="w-96">
             <CardHeader
               variant="gradient"
@@ -35,6 +81,8 @@ function Login() {
                 size="lg"
                 color="indigo"
                 type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
               <div>
                 <Input
@@ -42,6 +90,8 @@ function Login() {
                   label="Contraseña"
                   size="lg"
                   color="indigo"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <Typography
                   variant="small"
@@ -66,7 +116,7 @@ function Login() {
             </CardBody>
             <CardFooter className="pt-0">
               <Link to="/menu">
-                <Button variant="gradient" fullWidth>
+                <Button variant="gradient" fullWidth type="submit">
                   Iniciar sesión
                 </Button>
               </Link>
