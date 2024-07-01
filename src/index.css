@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define una animación llamada "pan" utilizando la regla @keyframes. 
+La animación "pan" cambia la posición del fondo de un elemento a lo largo del tiempo.*/
+@keyframes pan {
+  /* Va animandose de izquierda a derecha*/
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* Aplica la animación "pan" al elemento user-pattern" */
+#user-pattern {
+  background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+  background-size: 10%;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0%;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 700px;
+  opacity: 0.1;
+  animation: pan 150s linear infinite;
+  will-change: background-position;
+}
+
+/* Aplica la animación "pan" al elemento gear-pattern" */
+#gear-pattern {
+  background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+  background-size: 10%;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0%;
+  z-index: 0;
+  height: 109.5%;
+  width: 100%;
+  min-width: 700px;
+  opacity: 0.1;
+  animation: pan 150s linear infinite;
+  will-change: background-position;
+}
+
+/* Aplica la animación "pan" al elemento denied-pattern" */
+#denied-pattern {
+  background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+  background-size: 10%;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0%;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 700px;
+  opacity: 0.1;
+  animation: pan 150s linear infinite;
+  will-change: background-position;
+}
+
+/* Aplica la animación "pan" al elemento error404-pattern" */
+#error404-pattern {
+  background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+  background-size: 10%;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0%;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 700px;
+  opacity: 0.1;
+  animation: pan 150s linear infinite;
+  will-change: background-position;
+}
