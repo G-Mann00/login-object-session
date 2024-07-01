@@ -19,6 +19,7 @@ Login Object Session (LOS o login-object-session) es un pequeño proyecto desarr
 
 Este proyecto fue creado mediante la herramienta de construcción (build tool) Vite y hace uso de las siguientes librerías:
 
+- Tailwind CSS
 - Material Tailwind
 - React Router
 - React Icons
@@ -29,17 +30,44 @@ https://www.figma.com/design/sVkYFKVwYGW3quqw6XGCgv/Login-Object-Session?node-id
 
 ## Instalar Dependencias
 
-Una vez clonado el repositorio, se deben ejecutar los comandos en la terminal del IDE de su preferencia.
-Para poder instalar las dependencias necesarias para esta aplicación, se debe utilizar el siguiente comando:
+Una vez clonado el repositorio, se deben ejecutar los siguientes comandos en la terminal del IDE de su preferencia para instalar las dependencias necesarias de la aplicación.
+
+### Dependencias del Frontend
+
+Para instalar las dependencias del frontend, navega a la carpeta frontend y ejecuta:
 
 ```bash
+cd ./frontend
 npm install
 ```
 
-## Ejecutar interfaz de Vite
+### Dependencias del Backend
 
-React se ejecutará en http://localhost:5173
+Para instalar las dependencias del backend, navega a la carpeta backend y ejecuta:
 
 ```bash
+cd ./backend
+npm install
+```
+
+## Ejecutar la Aplicación
+
+Para el funcionamiento correcto de la aplicación, se deben ejecutar tanto el backend como el frontend.
+
+### Ejecución del Backend
+
+El backend se ejecutara en _puerto pendiente_
+
+```bash
+cd ./backend
+npm start
+```
+
+### Ejecución del Frontend
+
+El frontend se ejecutara en http://localhost:5173
+
+```bash
+cd ./frontend
 npm run dev
 ```
