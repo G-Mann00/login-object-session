@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Registro() {
   return (
     <>
       {/* Componente principal (Background) */}
@@ -17,7 +17,7 @@ function Login() {
         {/* Fondo de patron*/}
         <div id="user-pattern"></div>
 
-        {/* Formulario de inicio de sesión */}
+        {/* Formulario de Registro de nuevo usuario */}
         <form className="flex items-center">
           <Card className="w-96">
             <CardHeader
@@ -26,10 +26,16 @@ function Login() {
               className="mb-4 grid h-28 place-items-center"
             >
               <Typography variant="h3" color="white">
-                Te doy la bienvenida
+                Registro de Usuario
               </Typography>
             </CardHeader>
             <CardBody className="flex flex-col gap-4">
+              <Input
+                label="Correo Electrónico"
+                size="lg"
+                color="indigo"
+                type="text"
+              />
               <Input
                 label="Nombre de usuario"
                 size="lg"
@@ -65,21 +71,21 @@ function Login() {
               </div>
             </CardBody>
             <CardFooter className="pt-0">
-              <Link to="/menu">
+              <Link to="/">
                 <Button variant="gradient" fullWidth>
-                  Iniciar sesión
+                  Registrarse
                 </Button>
               </Link>
               <Typography variant="small" className="mt-6 flex justify-center">
-                ¿No tienes una cuenta?
+                Regresar a
                 <Typography
                   as="a"
-                  href="/registro"
+                  href="/"
                   variant="small"
                   color="blue-gray"
                   className="ml-1 font-bold hover:underline hover:text-indigo-900"
                 >
-                  REGISTRATE
+                  HOME
                 </Typography>
               </Typography>
             </CardFooter>
@@ -90,4 +96,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Registro;
