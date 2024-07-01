@@ -14,6 +14,7 @@ Login Object Session (LOS o login-object-session) es un pequeño proyecto desarr
 ## Vista Previa
 
 ![LOS-login](https://github.com/G-Mann00/login-object-session/assets/103607877/9f73a50f-0f73-49ad-8f22-f789f28d7163)
+![LOS-Menu](https://github.com/G-Mann00/login-object-session/assets/103607877/35397abe-3176-4487-9e7c-03a8721e12ad)
 
 ## Usos del Proyecto
 
@@ -25,6 +26,7 @@ Este proyecto fue creado mediante la herramienta de construcción (build tool) V
 - React Icons
 - Axios
 - Express
+
 - Mongoose
 - CORS
 - Body-parser
